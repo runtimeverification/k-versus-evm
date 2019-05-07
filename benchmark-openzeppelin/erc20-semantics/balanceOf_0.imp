@@ -1,0 +1,14 @@
+//when the requested account has no tokens
+//it should return zero
+
+int a, initialHolder, initialSupply, anotherAccount;
+initialHolder  = 1;
+initialSupply  = 100;
+anotherAccount = 2;
+
+makeThrowAsPrintTrue;
+makeAccount(initialHolder, initialSupply);
+makeAccount(anotherAccount, 0);
+makeCaller(initialHolder);
+makeTotalSupply(initialSupply);
+test.balanceOf(anotherAccount);

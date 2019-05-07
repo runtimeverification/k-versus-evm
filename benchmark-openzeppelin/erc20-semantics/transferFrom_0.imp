@@ -1,0 +1,31 @@
+//when the recipient is not the zero address
+//when the sender has enough approved balance
+//when the initial holder has enough balance
+//it transfers the requested amount
+//it decreases the spender allowance
+//it emits a transfer event
+//it emits an approval event
+
+int a, b, v, caller, initialHolder, initialSupply, spender, amount, to, count;
+
+initialHolder = 1;
+initialSupply = 10000;
+spender       = 2;
+to            = 3;
+amount        = 1;
+count         = 10000;
+
+makeThrowAsPrintTrue;
+makeAccount(initialHolder, initialSupply);
+makeAccount(spender, 0);
+makeAccount(to, 0);
+makeTotalSupply(initialSupply);
+
+makeAllowance(initialHolder, spender);
+test.makeCaller(initialHolder);
+test.approve(spender, initialSupply);
+test.makeCaller(spender);
+while (1 <= count) {
+  test.transferFrom(initialHolder, to, amount);
+  count = count + (-1);
+}

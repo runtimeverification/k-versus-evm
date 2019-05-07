@@ -1,0 +1,22 @@
+//when the spender is not the zero address
+//when the sender does not have enough balance
+//when the spender had an approved amount
+//it approves the requested amount and replaces the previous one
+
+int a, b, v, caller, owner, supply, spender, amount;
+
+owner = 1;
+supply = 100;
+spender       = 2;
+amount        = supply + 1;
+
+makeThrowAsPrintTrue;
+makeAccount(owner, supply);
+makeAccount(spender, 0);
+makeTotalSupply(supply);
+
+makeAllowance(owner, spender);
+test.makeCaller(owner);
+test.approve(spender, 1);
+test.approve(spender, amount);
+test.allowance(owner, spender);

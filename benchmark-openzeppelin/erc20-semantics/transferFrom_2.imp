@@ -1,0 +1,24 @@
+//when the recipient is not the zero address
+//when the sender does not have enough approved balance
+//when the initial holder has enough balance
+//it reverts
+
+int a, b, v, caller, initialHolder, initialSupply, spender, amount, to;
+
+initialHolder = 1;
+initialSupply = 100;
+spender       = 2;
+to            = 3;
+amount        = initialSupply;
+
+makeThrowAsPrintTrue;
+makeAccount(initialHolder, initialSupply);
+makeAccount(spender, 0);
+makeAccount(to, 0);
+makeTotalSupply(initialSupply);
+
+makeAllowance(initialHolder, spender);
+test.makeCaller(initialHolder);
+test.approve(spender, 99);
+test.makeCaller(spender);
+test.transferFrom(initialHolder, to, amount);

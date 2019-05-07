@@ -1,0 +1,12 @@
+//when the requested account has some tokens
+//it returns the total amount of tokens
+
+int a, initialHolder, initialSupply;
+initialHolder  = 1;
+initialSupply  = 100;
+
+makeThrowAsPrintTrue;
+makeAccount(initialHolder, initialSupply);
+makeCaller(initialHolder);
+makeTotalSupply(initialSupply);
+test.balanceOf(initialHolder);
