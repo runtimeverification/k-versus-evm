@@ -1,0 +1,13 @@
+test, erc20-semantics, evm-js(ganache)             
+approve_0,      0.002s, 0.038s
+approve_1,      0.006s, 0.060s
+approve_2,      0.006s, 0.033s
+approve_3,      0.006s, 0.056s
+balanceOf_0,    0.002s, 0.018s
+balanceOf_1,    0.006s, 0.017s
+totalSupply,    0.002s, 0.015s
+transfer_0,     0.002s, 0.025s
+transfer_1,     0.006s, 0.068s
+transferFrom_0, 0.007s, 0.097s
+transferFrom_1, 0.006s, 0.060s
+transferFrom_2, 0.006s, 0.056s

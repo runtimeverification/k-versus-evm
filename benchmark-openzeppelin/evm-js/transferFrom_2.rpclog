@@ -1,0 +1,602 @@
+Starting our own ganache instance
+Waiting for ganache to launch on port 8545...
+Ganache launched!
+Truffle v5.0.15 (core: 5.0.15)
+Solidity - 0.5.7 (solc-js)
+Node v8.10.0
+Web3.js v1.0.0-beta.37
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 1,
+   >   "method": "net_version",
+   >   "params": []
+   > }
+ <   {
+ <     "id": 1,
+ <     "jsonrpc": "2.0",
+ <     "result": "1557344190939"
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 2,
+   >   "method": "eth_accounts",
+   >   "params": []
+   > }
+ <   {
+ <     "id": 2,
+ <     "jsonrpc": "2.0",
+ <     "result": [
+ <       "0xdf08f82de32b8d460adbe8d72043e3a7e25a3b39",
+ <       "0x6704fbfcd5ef766b287262fa2281c105d57246a6",
+ <       "0x9e1ef1ec212f5dffb41d35d9e5c14054f26c6560",
+ <       "0xce42bdb34189a93c55de250e011c68faee374dd3",
+ <       "0x97a3fc5ee46852c1cf92a97b7bad42f2622267cc",
+ <       "0xb9dcbf8a52edc0c8dd9983fcc1d97b1f5d975ed7",
+ <       "0x26064a2e2b568d9a6d01b93d039d1da9cf2a58cd",
+ <       "0xe84da28128a48dd5585d1abb1ba67276fdd70776",
+ <       "0xcc036143c68a7a9a41558eae739b428ecde5ef66",
+ <       "0xe2b3204f29ab45d5fd074ff02ade098fbc381d42"
+ <     ]
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 3,
+   >   "method": "eth_accounts",
+   >   "params": []
+   > }
+ <   {
+ <     "id": 3,
+ <     "jsonrpc": "2.0",
+ <     "result": [
+ <       "0xdf08f82de32b8d460adbe8d72043e3a7e25a3b39",
+ <       "0x6704fbfcd5ef766b287262fa2281c105d57246a6",
+ <       "0x9e1ef1ec212f5dffb41d35d9e5c14054f26c6560",
+ <       "0xce42bdb34189a93c55de250e011c68faee374dd3",
+ <       "0x97a3fc5ee46852c1cf92a97b7bad42f2622267cc",
+ <       "0xb9dcbf8a52edc0c8dd9983fcc1d97b1f5d975ed7",
+ <       "0x26064a2e2b568d9a6d01b93d039d1da9cf2a58cd",
+ <       "0xe84da28128a48dd5585d1abb1ba67276fdd70776",
+ <       "0xcc036143c68a7a9a41558eae739b428ecde5ef66",
+ <       "0xe2b3204f29ab45d5fd074ff02ade098fbc381d42"
+ <     ]
+ <   }
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/access/Roles.sol
+> Compiling ./contracts/access/roles/CapperRole.sol
+> Compiling ./contracts/access/roles/MinterRole.sol
+> Compiling ./contracts/access/roles/PauserRole.sol
+> Compiling ./contracts/access/roles/SignerRole.sol
+> Compiling ./contracts/access/roles/WhitelistAdminRole.sol
+> Compiling ./contracts/access/roles/WhitelistedRole.sol
+> Compiling ./contracts/crowdsale/Crowdsale.sol
+> Compiling ./contracts/crowdsale/distribution/FinalizableCrowdsale.sol
+> Compiling ./contracts/crowdsale/distribution/PostDeliveryCrowdsale.sol
+> Compiling ./contracts/crowdsale/distribution/RefundableCrowdsale.sol
+> Compiling ./contracts/crowdsale/distribution/RefundablePostDeliveryCrowdsale.sol
+> Compiling ./contracts/crowdsale/emission/AllowanceCrowdsale.sol
+> Compiling ./contracts/crowdsale/emission/MintedCrowdsale.sol
+> Compiling ./contracts/crowdsale/price/IncreasingPriceCrowdsale.sol
+> Compiling ./contracts/crowdsale/validation/CappedCrowdsale.sol
+> Compiling ./contracts/crowdsale/validation/IndividuallyCappedCrowdsale.sol
+> Compiling ./contracts/crowdsale/validation/PausableCrowdsale.sol
+> Compiling ./contracts/crowdsale/validation/TimedCrowdsale.sol
+> Compiling ./contracts/crowdsale/validation/WhitelistCrowdsale.sol
+> Compiling ./contracts/cryptography/ECDSA.sol
+> Compiling ./contracts/cryptography/MerkleProof.sol
+> Compiling ./contracts/drafts/Counters.sol
+> Compiling ./contracts/drafts/ERC1046/ERC20Metadata.sol
+> Compiling ./contracts/drafts/ERC1820Implementer.sol
+> Compiling ./contracts/drafts/ERC20Migrator.sol
+> Compiling ./contracts/drafts/ERC20Snapshot.sol
+> Compiling ./contracts/drafts/ERC777/ERC777.sol
+> Compiling ./contracts/drafts/ERC777/IERC777.sol
+> Compiling ./contracts/drafts/ERC777/IERC777Recipient.sol
+> Compiling ./contracts/drafts/ERC777/IERC777Sender.sol
+> Compiling ./contracts/drafts/IERC1820Implementer.sol
+> Compiling ./contracts/drafts/IERC1820Registry.sol
+> Compiling ./contracts/drafts/SignatureBouncer.sol
+> Compiling ./contracts/drafts/SignedSafeMath.sol
+> Compiling ./contracts/drafts/TokenVesting.sol
+> Compiling ./contracts/examples/SampleCrowdsale.sol
+> Compiling ./contracts/examples/SimpleToken.sol
+> Compiling ./contracts/introspection/ERC165.sol
+> Compiling ./contracts/introspection/ERC165Checker.sol
+> Compiling ./contracts/introspection/IERC165.sol
+> Compiling ./contracts/lifecycle/Pausable.sol
+> Compiling ./contracts/math/Math.sol
+> Compiling ./contracts/math/SafeMath.sol
+> Compiling ./contracts/mocks/AddressImpl.sol
+> Compiling ./contracts/mocks/AllowanceCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/ArraysImpl.sol
+> Compiling ./contracts/mocks/CappedCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/CapperRoleMock.sol
+> Compiling ./contracts/mocks/ConditionalEscrowMock.sol
+> Compiling ./contracts/mocks/CountersImpl.sol
+> Compiling ./contracts/mocks/CrowdsaleMock.sol
+> Compiling ./contracts/mocks/ECDSAMock.sol
+> Compiling ./contracts/mocks/ERC165/ERC165InterfacesSupported.sol
+> Compiling ./contracts/mocks/ERC165/ERC165NotSupported.sol
+> Compiling ./contracts/mocks/ERC165CheckerMock.sol
+> Compiling ./contracts/mocks/ERC165Mock.sol
+> Compiling ./contracts/mocks/ERC1820ImplementerMock.sol
+> Compiling ./contracts/mocks/ERC20BurnableMock.sol
+> Compiling ./contracts/mocks/ERC20DetailedMock.sol
+> Compiling ./contracts/mocks/ERC20MetadataMock.sol
+> Compiling ./contracts/mocks/ERC20MintableMock.sol
+> Compiling ./contracts/mocks/ERC20Mock.sol
+> Compiling ./contracts/mocks/ERC20PausableMock.sol
+> Compiling ./contracts/mocks/ERC20SnapshotMock.sol
+> Compiling ./contracts/mocks/ERC721FullMock.sol
+> Compiling ./contracts/mocks/ERC721MintableBurnableImpl.sol
+> Compiling ./contracts/mocks/ERC721Mock.sol
+> Compiling ./contracts/mocks/ERC721PausableMock.sol
+> Compiling ./contracts/mocks/ERC721ReceiverMock.sol
+> Compiling ./contracts/mocks/ERC777Mock.sol
+> Compiling ./contracts/mocks/ERC777SenderRecipientMock.sol
+> Compiling ./contracts/mocks/FinalizableCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/IncreasingPriceCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/IndividuallyCappedCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/MathMock.sol
+> Compiling ./contracts/mocks/MerkleProofWrapper.sol
+> Compiling ./contracts/mocks/MintedCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/MinterRoleMock.sol
+> Compiling ./contracts/mocks/OwnableInterfaceId.sol
+> Compiling ./contracts/mocks/OwnableMock.sol
+> Compiling ./contracts/mocks/PausableCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/PausableMock.sol
+> Compiling ./contracts/mocks/PauserRoleMock.sol
+> Compiling ./contracts/mocks/PostDeliveryCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/PullPaymentMock.sol
+> Compiling ./contracts/mocks/ReentrancyAttack.sol
+> Compiling ./contracts/mocks/ReentrancyMock.sol
+> Compiling ./contracts/mocks/RefundableCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/RefundablePostDeliveryCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/RolesMock.sol
+> Compiling ./contracts/mocks/SafeERC20Helper.sol
+> Compiling ./contracts/mocks/SafeMathMock.sol
+> Compiling ./contracts/mocks/SecondaryMock.sol
+> Compiling ./contracts/mocks/SignatureBouncerMock.sol
+> Compiling ./contracts/mocks/SignedSafeMathMock.sol
+> Compiling ./contracts/mocks/SignerRoleMock.sol
+> Compiling ./contracts/mocks/TimedCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/WhitelistAdminRoleMock.sol
+> Compiling ./contracts/mocks/WhitelistCrowdsaleImpl.sol
+> Compiling ./contracts/mocks/WhitelistedRoleMock.sol
+> Compiling ./contracts/ownership/Ownable.sol
+> Compiling ./contracts/ownership/Secondary.sol
+> Compiling ./contracts/payment/PaymentSplitter.sol
+> Compiling ./contracts/payment/PullPayment.sol
+> Compiling ./contracts/payment/escrow/ConditionalEscrow.sol
+> Compiling ./contracts/payment/escrow/Escrow.sol
+> Compiling ./contracts/payment/escrow/RefundEscrow.sol
+> Compiling ./contracts/token/ERC20/ERC20.sol
+> Compiling ./contracts/token/ERC20/ERC20Burnable.sol
+> Compiling ./contracts/token/ERC20/ERC20Capped.sol
+> Compiling ./contracts/token/ERC20/ERC20Detailed.sol
+> Compiling ./contracts/token/ERC20/ERC20Mintable.sol
+> Compiling ./contracts/token/ERC20/ERC20Pausable.sol
+> Compiling ./contracts/token/ERC20/IERC20.sol
+> Compiling ./contracts/token/ERC20/SafeERC20.sol
+> Compiling ./contracts/token/ERC20/TokenTimelock.sol
+> Compiling ./contracts/token/ERC721/ERC721.sol
+> Compiling ./contracts/token/ERC721/ERC721Burnable.sol
+> Compiling ./contracts/token/ERC721/ERC721Enumerable.sol
+> Compiling ./contracts/token/ERC721/ERC721Full.sol
+> Compiling ./contracts/token/ERC721/ERC721Holder.sol
+> Compiling ./contracts/token/ERC721/ERC721Metadata.sol
+> Compiling ./contracts/token/ERC721/ERC721MetadataMintable.sol
+> Compiling ./contracts/token/ERC721/ERC721Mintable.sol
+> Compiling ./contracts/token/ERC721/ERC721Pausable.sol
+> Compiling ./contracts/token/ERC721/IERC721.sol
+> Compiling ./contracts/token/ERC721/IERC721Enumerable.sol
+> Compiling ./contracts/token/ERC721/IERC721Full.sol
+> Compiling ./contracts/token/ERC721/IERC721Metadata.sol
+> Compiling ./contracts/token/ERC721/IERC721Receiver.sol
+> Compiling ./contracts/utils/Address.sol
+> Compiling ./contracts/utils/Arrays.sol
+> Compiling ./contracts/utils/ReentrancyGuard.sol
+
+    > compilation warnings encountered:
+
+/home/zy/workspace/openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol:138:5: Warning: Function state mutability can be restricted to pure
+    function _preValidatePurchase(address beneficiary, uint256 weiAmount) internal view {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+> Artifacts written to /tmp/test-11948-16193-1xph8rs.i151
+> Compiled successfully using:
+   - solc: 0.5.7+commit.6da8b019.Emscripten.clang
+
+
+[0m[0m
+[0m  Contract: ERC20[0m
+   > {
+   >   "jsonrpc": "2.0",
+   >   "method": "evm_snapshot",
+   >   "id": 1557344203106
+   > }
+ <   {
+ <     "id": 1557344203106,
+ <     "jsonrpc": "2.0",
+ <     "result": "0x1"
+ <   }
+[0m    transfer from[0m
+[0m      when the recipient is not the zero address[0m
+[0m        when the spender does not have enough approved balance[0m
+[0m          when the initial holder has enough balance[0m
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 4,
+   >   "method": "eth_blockNumber",
+   >   "params": []
+   > }
+ <   {
+ <     "id": 4,
+ <     "jsonrpc": "2.0",
+ <     "result": "0x0"
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 5,
+   >   "method": "eth_getBlockByNumber",
+   >   "params": [
+   >     "latest",
+   >     false
+   >   ]
+   > }
+ <   {
+ <     "id": 5,
+ <     "jsonrpc": "2.0",
+ <     "result": {
+ <       "number": "0x0",
+ <       "hash": "0x55ab33294fbb43f2aa2d26f1dade7ae4f54daf117200e9f1080de2ea79de8fc5",
+ <       "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+ <       "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+ <       "nonce": "0x0000000000000000",
+ <       "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+ <       "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+ <       "transactionsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+ <       "stateRoot": "0xb7c1678b1e3193b25d661959c0e97b2de167bc5e50051fe13e2d1ac609fde8df",
+ <       "receiptsRoot": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+ <       "miner": "0x0000000000000000000000000000000000000000",
+ <       "difficulty": "0x0",
+ <       "totalDifficulty": "0x0",
+ <       "extraData": "0x",
+ <       "size": "0x3e8",
+ <       "gasLimit": "0xfffffffffff",
+ <       "gasUsed": "0x0",
+ <       "timestamp": "0x5cd32fbe",
+ <       "transactions": [],
+ <       "uncles": []
+ <     }
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 6,
+   >   "method": "net_version",
+   >   "params": []
+   > }
+ <   {
+ <     "id": 6,
+ <     "jsonrpc": "2.0",
+ <     "result": "1557344190939"
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 7,
+   >   "method": "eth_sendTransaction",
+   >   "params": [
+   >     {
+   >       "from": "0xdf08f82de32b8d460adbe8d72043e3a7e25a3b39",
+   >       "gas": "0x6691b7",
+   >       "gasPrice": "0x4a817c800",
+   >       "data": "0x608060405234801561001057600080fd5b50604051604080620015238339810180604052604081101561003157600080fd5b810190808051906020019092919080519060200190929190505050610065828261006c640100000000026401000000009004565b50506102c9565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561010f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f45524332303a206d696e7420746f20746865207a65726f20616464726573730081525060200191505060405180910390fd5b6101318160025461024164010000000002610d0c179091906401000000009004565b600281905550610195816000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461024164010000000002610d0c179091906401000000009004565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508173ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef836040518082815260200191505060405180910390a35050565b6000808284019050838110156102bf576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b61124a80620002d96000396000f3fe608060405234801561001057600080fd5b50600436106100d1576000357c01000000000000000000000000000000000000000000000000000000009004806370a082311161008e57806370a082311461030257806379cc67901461035a5780639dc29fac146103a8578063a457c2d7146103f6578063a9059cbb1461045c578063dd62ed3e146104c2576100d1565b8063095ea7b3146100d657806318160ddd1461013c57806323b872dd1461015a57806339509351146101e057806340c10f191461024657806356189cb414610294575b600080fd5b610122600480360360408110156100ec57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061053a565b604051808215151515815260200191505060405180910390f35b610144610551565b6040518082815260200191505060405180910390f35b6101c66004803603606081101561017057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061055b565b604051808215151515815260200191505060405180910390f35b61022c600480360360408110156101f657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061060c565b604051808215151515815260200191505060405180910390f35b6102926004803603604081101561025c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506106b1565b005b610300600480360360608110156102aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506106bf565b005b6103446004803603602081101561031857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106cf565b6040518082815260200191505060405180910390f35b6103a66004803603604081101561037057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610717565b005b6103f4600480360360408110156103be57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610725565b005b6104426004803603604081101561040c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610733565b604051808215151515815260200191505060405180910390f35b6104a86004803603604081101561047257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506107d8565b604051808215151515815260200191505060405180910390f35b610524600480360360408110156104d857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506107ef565b6040518082815260200191505060405180910390f35b6000610547338484610876565b6001905092915050565b6000600254905090565b6000610568848484610a6d565b61060184336105fc85600160008a73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b610876565b600190509392505050565b60006106a733846106a285600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610d0c90919063ffffffff16565b610876565b6001905092915050565b6106bb8282610d94565b5050565b6106ca838383610876565b505050565b60008060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b6107218282610f4f565b5050565b61072f8282610ff6565b5050565b60006107ce33846107c985600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b610876565b6001905092915050565b60006107e5338484610a6d565b6001905092915050565b6000600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff1614156108fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260248152602001806111fb6024913960400191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610982576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806111b86022913960400191505060405180910390fd5b80600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508173ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925836040518082815260200191505060405180910390a3505050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610af3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001806111956023913960400191505060405180910390fd5b610b44816000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b6000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550610bd7816000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610d0c90919063ffffffff16565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508173ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef836040518082815260200191505060405180910390a3505050565b600082821115610cfb576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525060200191505060405180910390fd5b600082840390508091505092915050565b600080828401905083811015610d8a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610e37576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f45524332303a206d696e7420746f20746865207a65726f20616464726573730081525060200191505060405180910390fd5b610e4c81600254610d0c90919063ffffffff16565b600281905550610ea3816000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610d0c90919063ffffffff16565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508173ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef836040518082815260200191505060405180910390a35050565b610f598282610ff6565b610ff28233610fed84600160008873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b610876565b5050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561107c576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806111da6021913960400191505060405180910390fd5b61109181600254610c8390919063ffffffff16565b6002819055506110e8816000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef836040518082815260200191505060405180910390a3505056fe45524332303a207472616e7366657220746f20746865207a65726f206164647265737345524332303a20617070726f766520746f20746865207a65726f206164647265737345524332303a206275726e2066726f6d20746865207a65726f206164647265737345524332303a20617070726f76652066726f6d20746865207a65726f2061646472657373a165627a7a723058206e45690b74f73f2a91b3984d65223dcf33e49a1a81b711fa9d8eb59d32adaf2800290000000000000000000000006704fbfcd5ef766b287262fa2281c105d57246a60000000000000000000000000000000000000000000000000000000000000064"
+   >     }
+   >   ]
+   > }
+ <   {
+ <     "id": 7,
+ <     "jsonrpc": "2.0",
+ <     "result": "0x8945420ac26e81752a0e3e093ac11ce2d7baac30b8321332499bce9318a6ee72"
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 8,
+   >   "method": "eth_getTransactionReceipt",
+   >   "params": [
+   >     "0x8945420ac26e81752a0e3e093ac11ce2d7baac30b8321332499bce9318a6ee72"
+   >   ]
+   > }
+ <   {
+ <     "id": 8,
+ <     "jsonrpc": "2.0",
+ <     "result": {
+ <       "transactionHash": "0x8945420ac26e81752a0e3e093ac11ce2d7baac30b8321332499bce9318a6ee72",
+ <       "transactionIndex": "0x0",
+ <       "blockHash": "0xe9a6371822c1e330ef7a84ee09310d0f157311a7286f4ebd8633c2b97434d3f6",
+ <       "blockNumber": "0x1",
+ <       "from": "0xdf08f82de32b8d460adbe8d72043e3a7e25a3b39",
+ <       "to": null,
+ <       "gasUsed": "0x14fead",
+ <       "cumulativeGasUsed": "0x14fead",
+ <       "contractAddress": "0x0f5ea0a652e851678ebf77b69484bfcd31f9459b",
+ <       "logs": [
+ <         {
+ <           "logIndex": "0x0",
+ <           "transactionIndex": "0x0",
+ <           "transactionHash": "0x8945420ac26e81752a0e3e093ac11ce2d7baac30b8321332499bce9318a6ee72",
+ <           "blockHash": "0xe9a6371822c1e330ef7a84ee09310d0f157311a7286f4ebd8633c2b97434d3f6",
+ <           "blockNumber": "0x1",
+ <           "address": "0x0f5ea0a652e851678ebf77b69484bfcd31f9459b",
+ <           "data": "0x0000000000000000000000000000000000000000000000000000000000000064",
+ <           "topics": [
+ <             "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+ <             "0x0000000000000000000000000000000000000000000000000000000000000000",
+ <             "0x0000000000000000000000006704fbfcd5ef766b287262fa2281c105d57246a6"
+ <           ],
+ <           "type": "mined"
+ <         }
+ <       ],
+ <       "status": "0x1",
+ <       "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000020000000000000000000000000000000000000020000000000000000000800000000000000000000000010000000004000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000004000000000000000000000000020000000000000080020000000000000000000000000000000000000000000000000000000000000000000",
+ <       "v": "0x1b",
+ <       "r": "0x158f4c572820e6453517033519c4aac66238286a6e136543e2d8360dc49edb9e",
+ <       "s": "0x0196278574fb85070d6f28bff2abeb1889d9d47c2976fff94d4d90b77e72704f"
+ <     }
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 9,
+   >   "method": "eth_getCode",
+   >   "params": [
+   >     "0x0f5ea0a652e851678ebf77b69484bfcd31f9459b",
+   >     "latest"
+   >   ]
+   > }
+ <   {
+ <     "id": 9,
+ <     "jsonrpc": "2.0",
+ <     "result": "0x608060405234801561001057600080fd5b50600436106100d1576000357c01000000000000000000000000000000000000000000000000000000009004806370a082311161008e57806370a082311461030257806379cc67901461035a5780639dc29fac146103a8578063a457c2d7146103f6578063a9059cbb1461045c578063dd62ed3e146104c2576100d1565b8063095ea7b3146100d657806318160ddd1461013c57806323b872dd1461015a57806339509351146101e057806340c10f191461024657806356189cb414610294575b600080fd5b610122600480360360408110156100ec57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061053a565b604051808215151515815260200191505060405180910390f35b610144610551565b6040518082815260200191505060405180910390f35b6101c66004803603606081101561017057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061055b565b604051808215151515815260200191505060405180910390f35b61022c600480360360408110156101f657600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291908035906020019092919050505061060c565b604051808215151515815260200191505060405180910390f35b6102926004803603604081101561025c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506106b1565b005b610300600480360360608110156102aa57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506106bf565b005b6103446004803603602081101561031857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106cf565b6040518082815260200191505060405180910390f35b6103a66004803603604081101561037057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610717565b005b6103f4600480360360408110156103be57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610725565b005b6104426004803603604081101561040c57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610733565b604051808215151515815260200191505060405180910390f35b6104a86004803603604081101561047257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506107d8565b604051808215151515815260200191505060405180910390f35b610524600480360360408110156104d857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506107ef565b6040518082815260200191505060405180910390f35b6000610547338484610876565b6001905092915050565b6000600254905090565b6000610568848484610a6d565b61060184336105fc85600160008a73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b610876565b600190509392505050565b60006106a733846106a285600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610d0c90919063ffffffff16565b610876565b6001905092915050565b6106bb8282610d94565b5050565b6106ca838383610876565b505050565b60008060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b6107218282610f4f565b5050565b61072f8282610ff6565b5050565b60006107ce33846107c985600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b610876565b6001905092915050565b60006107e5338484610a6d565b6001905092915050565b6000600160008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff1614156108fc576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260248152602001806111fb6024913960400191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610982576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806111b86022913960400191505060405180910390fd5b80600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508173ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925836040518082815260200191505060405180910390a3505050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610af3576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260238152602001806111956023913960400191505060405180910390fd5b610b44816000808673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b6000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550610bd7816000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610d0c90919063ffffffff16565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508173ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef836040518082815260200191505060405180910390a3505050565b600082821115610cfb576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601e8152602001807f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525060200191505060405180910390fd5b600082840390508091505092915050565b600080828401905083811015610d8a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601b8152602001807f536166654d6174683a206164646974696f6e206f766572666c6f77000000000081525060200191505060405180910390fd5b8091505092915050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415610e37576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601f8152602001807f45524332303a206d696e7420746f20746865207a65726f20616464726573730081525060200191505060405180910390fd5b610e4c81600254610d0c90919063ffffffff16565b600281905550610ea3816000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610d0c90919063ffffffff16565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508173ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef836040518082815260200191505060405180910390a35050565b610f598282610ff6565b610ff28233610fed84600160008873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b610876565b5050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141561107c576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806111da6021913960400191505060405180910390fd5b61109181600254610c8390919063ffffffff16565b6002819055506110e8816000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610c8390919063ffffffff16565b6000808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef836040518082815260200191505060405180910390a3505056fe45524332303a207472616e7366657220746f20746865207a65726f206164647265737345524332303a20617070726f766520746f20746865207a65726f206164647265737345524332303a206275726e2066726f6d20746865207a65726f206164647265737345524332303a20617070726f76652066726f6d20746865207a65726f2061646472657373a165627a7a723058206e45690b74f73f2a91b3984d65223dcf33e49a1a81b711fa9d8eb59d32adaf280029"
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 10,
+   >   "method": "eth_getBlockByNumber",
+   >   "params": [
+   >     "latest",
+   >     false
+   >   ]
+   > }
+ <   {
+ <     "id": 10,
+ <     "jsonrpc": "2.0",
+ <     "result": {
+ <       "number": "0x1",
+ <       "hash": "0xe9a6371822c1e330ef7a84ee09310d0f157311a7286f4ebd8633c2b97434d3f6",
+ <       "parentHash": "0x55ab33294fbb43f2aa2d26f1dade7ae4f54daf117200e9f1080de2ea79de8fc5",
+ <       "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+ <       "nonce": "0x0000000000000000",
+ <       "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+ <       "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000020000000000000000000000000000000000000020000000000000000000800000000000000000000000010000000004000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000004000000000000000000000000020000000000000080020000000000000000000000000000000000000000000000000000000000000000000",
+ <       "transactionsRoot": "0x28ab07ec14766b0d30ff130557a650ba327e2540a4d143add4a45edcbfb5222e",
+ <       "stateRoot": "0x24a55377df8c32e621624be2d9458b87a7d8415b3a5a7bf3b37ed43a4eb7ad4d",
+ <       "receiptsRoot": "0xc60f1e389f112ad3f04b4480081036093c45284fe1e19f0319493d50184cc00b",
+ <       "miner": "0x0000000000000000000000000000000000000000",
+ <       "difficulty": "0x0",
+ <       "totalDifficulty": "0x0",
+ <       "extraData": "0x",
+ <       "size": "0x3e8",
+ <       "gasLimit": "0xfffffffffff",
+ <       "gasUsed": "0x14fead",
+ <       "timestamp": "0x5cd32fcb",
+ <       "transactions": [
+ <         "0x8945420ac26e81752a0e3e093ac11ce2d7baac30b8321332499bce9318a6ee72"
+ <       ],
+ <       "uncles": []
+ <     }
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 11,
+   >   "method": "net_version",
+   >   "params": []
+   > }
+ <   {
+ <     "id": 11,
+ <     "jsonrpc": "2.0",
+ <     "result": "1557344190939"
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 12,
+   >   "method": "eth_sendTransaction",
+   >   "params": [
+   >     {
+   >       "from": "0x6704fbfcd5ef766b287262fa2281c105d57246a6",
+   >       "gas": "0x6691b7",
+   >       "gasPrice": "0x4a817c800",
+   >       "to": "0x0f5ea0a652e851678ebf77b69484bfcd31f9459b",
+   >       "data": "0x095ea7b30000000000000000000000009e1ef1ec212f5dffb41d35d9e5c14054f26c65600000000000000000000000000000000000000000000000000000000000000063"
+   >     }
+   >   ]
+   > }
+ <   {
+ <     "id": 12,
+ <     "jsonrpc": "2.0",
+ <     "result": "0xe78b284fa4d277ef3ce91024b948e991405475918d22147dd5e792b8efba995d"
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 13,
+   >   "method": "eth_getTransactionReceipt",
+   >   "params": [
+   >     "0xe78b284fa4d277ef3ce91024b948e991405475918d22147dd5e792b8efba995d"
+   >   ]
+   > }
+ <   {
+ <     "id": 13,
+ <     "jsonrpc": "2.0",
+ <     "result": {
+ <       "transactionHash": "0xe78b284fa4d277ef3ce91024b948e991405475918d22147dd5e792b8efba995d",
+ <       "transactionIndex": "0x0",
+ <       "blockHash": "0x17571fbcc01573e3fde85fb31124c3507f7a1397e544361572c7b2c40443480f",
+ <       "blockNumber": "0x2",
+ <       "from": "0x6704fbfcd5ef766b287262fa2281c105d57246a6",
+ <       "to": "0x0f5ea0a652e851678ebf77b69484bfcd31f9459b",
+ <       "gasUsed": "0xb132",
+ <       "cumulativeGasUsed": "0xb132",
+ <       "contractAddress": null,
+ <       "logs": [
+ <         {
+ <           "logIndex": "0x0",
+ <           "transactionIndex": "0x0",
+ <           "transactionHash": "0xe78b284fa4d277ef3ce91024b948e991405475918d22147dd5e792b8efba995d",
+ <           "blockHash": "0x17571fbcc01573e3fde85fb31124c3507f7a1397e544361572c7b2c40443480f",
+ <           "blockNumber": "0x2",
+ <           "address": "0x0f5ea0a652e851678ebf77b69484bfcd31f9459b",
+ <           "data": "0x0000000000000000000000000000000000000000000000000000000000000063",
+ <           "topics": [
+ <             "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+ <             "0x0000000000000000000000006704fbfcd5ef766b287262fa2281c105d57246a6",
+ <             "0x0000000000000000000000009e1ef1ec212f5dffb41d35d9e5c14054f26c6560"
+ <           ],
+ <           "type": "mined"
+ <         }
+ <       ],
+ <       "status": "0x1",
+ <       "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000800000000000000000200000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000020000020000000000000080000000010000000000000000000000000000000000000000000000000000000000000",
+ <       "v": "0x1c",
+ <       "r": "0x4823f8be80b46d55441cd598a4766fcbd5ee69392fa555a8af67f6fa36e33ba3",
+ <       "s": "0x16d9c57be2ac1a1aafbac24546f78aa128493a814f6eeb97136546c4c83db6f4"
+ <     }
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 14,
+   >   "method": "eth_getBlockByNumber",
+   >   "params": [
+   >     "latest",
+   >     false
+   >   ]
+   > }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 15,
+   >   "method": "web3_clientVersion",
+   >   "params": []
+   > }
+ <   {
+ <     "id": 14,
+ <     "jsonrpc": "2.0",
+ <     "result": {
+ <       "number": "0x2",
+ <       "hash": "0x17571fbcc01573e3fde85fb31124c3507f7a1397e544361572c7b2c40443480f",
+ <       "parentHash": "0xe9a6371822c1e330ef7a84ee09310d0f157311a7286f4ebd8633c2b97434d3f6",
+ <       "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+ <       "nonce": "0x0000000000000000",
+ <       "sha3Uncles": "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+ <       "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000800000000000000000200000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000020000020000000000000080000000010000000000000000000000000000000000000000000000000000000000000",
+ <       "transactionsRoot": "0x0f96426101c6cfe2c6631bcf675fae317c0eab71faa18800ab8bdb315fd47292",
+ <       "stateRoot": "0xb58819bd474144ff6fb535ae37188a067e8f5dda9c55ec6d880c6842851663c4",
+ <       "receiptsRoot": "0x1522933c52a7424436942640b89a4479e5c2072099d115aa905c11f62c2cb1d4",
+ <       "miner": "0x0000000000000000000000000000000000000000",
+ <       "difficulty": "0x0",
+ <       "totalDifficulty": "0x0",
+ <       "extraData": "0x",
+ <       "size": "0x3e8",
+ <       "gasLimit": "0xfffffffffff",
+ <       "gasUsed": "0xb132",
+ <       "timestamp": "0x5cd32fcb",
+ <       "transactions": [
+ <         "0xe78b284fa4d277ef3ce91024b948e991405475918d22147dd5e792b8efba995d"
+ <       ],
+ <       "uncles": []
+ <     }
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 16,
+   >   "method": "net_version",
+   >   "params": []
+   > }
+ <   {
+ <     "id": 15,
+ <     "jsonrpc": "2.0",
+ <     "result": "EthereumJS TestRPC/v2.5.5/ethereum-js"
+ <   }
+ <   {
+ <     "id": 16,
+ <     "jsonrpc": "2.0",
+ <     "result": "1557344190939"
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "id": 17,
+   >   "method": "eth_sendTransaction",
+   >   "params": [
+   >     {
+   >       "from": "0x9e1ef1ec212f5dffb41d35d9e5c14054f26c6560",
+   >       "gas": "0x6691b7",
+   >       "gasPrice": "0x4a817c800",
+   >       "to": "0x0f5ea0a652e851678ebf77b69484bfcd31f9459b",
+   >       "data": "0x23b872dd0000000000000000000000006704fbfcd5ef766b287262fa2281c105d57246a6000000000000000000000000ce42bdb34189a93c55de250e011c68faee374dd30000000000000000000000000000000000000000000000000000000000000064"
+   >     }
+   >   ]
+   > }
+ <   {
+ <     "id": 17,
+ <     "jsonrpc": "2.0",
+ <     "result": "0xd48cd1531ad7e58f92ac6eb4b333d5585a51d2c4eee2acf949f9ebf722d80c3d",
+ <     "error": {
+ <       "message": "VM Exception while processing transaction: revert SafeMath: subtraction overflow",
+ <       "code": -32000,
+ <       "data": {
+ <         "0xd48cd1531ad7e58f92ac6eb4b333d5585a51d2c4eee2acf949f9ebf722d80c3d": {
+ <           "error": "revert",
+ <           "program_counter": 3323,
+ <           "return": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001e536166654d6174683a207375627472616374696f6e206f766572666c6f770000",
+ <           "reason": "SafeMath: subtraction overflow"
+ <         },
+ <         "stack": "o: VM Exception while processing transaction: revert SafeMath: subtraction overflow\n    at Function.o.fromResults (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:10:81931)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:47:121973\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:47:102384\n    at p (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:47:102041)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:47:102094\n    at t.default (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:52:497368)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:47:103008\n    at w.n.emit (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1211583)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1850382\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1850405\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:500011\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:26124\n    at i (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:41179)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:21647\n    at _combinedTickCallback (internal/process/next_tick.js:131:7)\n    at process._tickCallback (internal/process/next_tick.js:180:9)",
+ <         "name": "o"
+ <       }
+ <     }
+ <   }
+   > {
+   >   "jsonrpc": "2.0",
+   >   "method": "eth_call",
+   >   "params": [
+   >     {
+   >       "from": "0x9e1ef1ec212f5dffb41d35d9e5c14054f26c6560",
+   >       "gas": "0x6691b7",
+   >       "gasPrice": "0x4a817c800",
+   >       "to": "0x0f5ea0a652e851678ebf77b69484bfcd31f9459b",
+   >       "data": "0x23b872dd0000000000000000000000006704fbfcd5ef766b287262fa2281c105d57246a6000000000000000000000000ce42bdb34189a93c55de250e011c68faee374dd30000000000000000000000000000000000000000000000000000000000000064"
+   >     }
+   >   ],
+   >   "id": 1557344203463
+   > }
+ <   {
+ <     "id": 1557344203463,
+ <     "jsonrpc": "2.0",
+ <     "error": {
+ <       "message": "VM Exception while processing transaction: revert SafeMath: subtraction overflow",
+ <       "code": -32000,
+ <       "data": {
+ <         "0x735c5dd6b156d9b33027038886ea46e139c394548b5064170523682545697e75": {
+ <           "error": "revert",
+ <           "program_counter": 3323,
+ <           "return": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000001e536166654d6174683a207375627472616374696f6e206f766572666c6f770000",
+ <           "reason": "SafeMath: subtraction overflow"
+ <         },
+ <         "stack": "o: VM Exception while processing transaction: revert SafeMath: subtraction overflow\n    at Function.o.fromResults (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:10:81931)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:47:121235\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1853218\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:26124\n    at i (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:41179)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1210468\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:105466\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:32:392\n    at c (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:32:5407)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:32:317\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1871644\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:23237\n    at o (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:26646)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:26124\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1864681\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1862544\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:61:1889757\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:23237\n    at o (/home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:26646)\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:26124\n    at /home/zy/workspace/openzeppelin-solidity/node_modules/ganache-cli/build/ganache-core.node.cli.js:2:5439\n    at FSReqWrap.oncomplete (fs.js:135:15)",
+ <         "name": "o"
+ <       }
+ <     }
+ <   }
+          [32m  ✓[0m[90m reverts[0m[33m (56ms)[0m
+
+
+[92m [0m[32m 1 passing[0m[90m (380ms)[0m
+

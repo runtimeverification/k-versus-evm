@@ -9,11 +9,10 @@
 int a, b, v, caller, initialHolder, initialSupply, spender, amount, to, count;
 
 initialHolder = 1;
-initialSupply = 10000;
+initialSupply = 100;
 spender       = 2;
 to            = 3;
-amount        = 1;
-count         = 10000;
+amount        = initialSupply;
 
 makeThrowAsPrintTrue;
 makeAccount(initialHolder, initialSupply);
@@ -25,7 +24,6 @@ makeAllowance(initialHolder, spender);
 test.makeCaller(initialHolder);
 test.approve(spender, initialSupply);
 test.makeCaller(spender);
-while (1 <= count) {
-  test.transferFrom(initialHolder, to, amount);
-  count = count + (-1);
-}
+test.transferFrom(initialHolder, to, amount);
+test.balanceOf(initialHolder);
+test.balanceOf(to);

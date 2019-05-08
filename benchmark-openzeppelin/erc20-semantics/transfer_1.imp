@@ -3,7 +3,7 @@
 //it transfers the requested amount
 //it emits a transfer event
 
-int b, v, caller, initialHolder, initialSupply, recipient, amount;
+int a, b, v, caller, initialHolder, initialSupply, recipient, amount;
 
 initialHolder = 1;
 initialSupply = 100;
@@ -20,3 +20,5 @@ makeAllowance(initialHolder, recipient);
 test.makeCaller(initialHolder);
 makeTotalSupply(initialSupply);
 test.transfer(recipient, amount);
+test.balanceOf(initialHolder);
+test.balanceOf(recipient);
